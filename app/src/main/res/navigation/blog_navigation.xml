@@ -6,19 +6,27 @@
     app:startDestination="@id/listFragment">
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.charlye934.notes.list.ListFragment"
+        android:name="com.charlye934.notes.fragment.list.ListFragment"
         android:label="To Do List"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_listFragment_to_updateFragment"
-            app:destination="@id/updateFragment" />
+            app:destination="@id/updateFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
-        android:name="com.charlye934.notes.addFragment"
+        android:name="com.charlye934.notes.AddFragment"
         android:label="Add"
         tools:layout="@layout/fragment_add" >
         <action
@@ -27,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
-        android:name="com.charlye934.notes.update.UpdateFragment"
+        android:name="com.charlye934.notes.fragment.update.UpdateFragment"
         android:label="Update"
         tools:layout="@layout/fragment_update" >
         <action

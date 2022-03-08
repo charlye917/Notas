@@ -1,9 +1,8 @@
-package com.charlye934.notes.list
+package com.charlye934.notes.fragment.list
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.charlye934.notes.R
 import com.charlye934.notes.databinding.FragmentListBinding
